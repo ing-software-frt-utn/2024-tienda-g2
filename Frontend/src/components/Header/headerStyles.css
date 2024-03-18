@@ -1,0 +1,33 @@
+.navbar-container {
+    display: none;
+}
+
+.header-content {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .navbar-container {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .header-content {
+        display: block;
+        height: 70px;
+        /* background-color: #060515; */
+        /* margin-top: 5px; */
+        /* margin-right: 16px; */
+        /* margin-left: 16px; */
+        /* border-radius: 10px; */
+    }
+
+    .home-section {
+        top: 70px;
+        height: calc(100% - 70px);
+    }
+
+}

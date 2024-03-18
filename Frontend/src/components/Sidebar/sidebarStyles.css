@@ -1,0 +1,489 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background: #060515;
+  /* --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity)); */
+  z-index: 30;
+  transition: all 0.3s ease;
+
+  /* left: 10px; */
+  /* top: 2%; */
+  /* height: 96%; */
+  /* border-radius: 10px; */
+}
+
+.sidebar.close {
+  width: 100px;
+  left: 10px;
+  top: 2%;
+  height: 96%;
+  /* height: 80%; */
+  border-radius: 10px;
+}
+
+.sidebar .logo-details {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .closeSidebarButton {
+  position: absolute;
+  width: 40px;
+  top: 0;
+  right: 0;
+  margin-top: 8%;
+  margin-right: -10px;
+  background-color: #1F1E2C;
+  padding: 8px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar.close .closeSidebarButton{
+  margin-top: 100% !important;
+  transform: rotate(180deg);
+}
+
+.closeSidebarButton:hover {
+  background-color: #060515;
+  padding: 5px;
+}
+
+.sidebar .logo-details .logo_img_open {
+  margin-left: 5px;
+  margin-top: 50px;
+  width: 260px;
+  height: 80px;
+  max-width: none;
+  border-radius: 10px;
+}
+
+.sidebar.close .logo-details .logo_img_close {
+  margin-left: 15px;
+  margin-top: 60px;
+  width: 70px;
+  height: 70px;
+  max-width: none;
+  border-radius: 15px;
+}
+
+.sidebar.close .logo-details .logo_img_open {
+  display: none;
+}
+
+.sidebar.close .logo-details .logo_name {
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-links {
+  margin-top: 50px;
+  height: 100%;
+  padding: 0px 15px 200px 10px;
+  overflow: auto;
+  border-top: 1px solid #1F1E2C;
+}
+
+.sidebar.close .nav-links {
+  overflow: visible;
+  margin-top: 60px;
+}
+
+.sidebar .nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+  margin-top: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* ---------------- */
+
+/* PARA MENU CON ACTIVE OPTION = FALSE */
+
+.sidebar .nav-links li:hover {
+  /* background: hsla(0,0%,100%,.06); */
+  background: #1F1E2C;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar .nav-links li li a:hover {
+  /* background: rgb(55 65 81); */
+  /* border-radius: 10px; */
+  /* padding: 0px !important; */
+  background: #1F1E2C;
+  margin-left: 5px;
+}
+
+/* PARA MENU CON ACTIVE OPTION = TRUE */
+
+.sidebar .nav-links li.activeOption:hover {
+  background: #1F1E2C;
+  color: red;
+  /* padding: 0px; */
+  /* background: #C7E1C8; */
+}
+.sidebar .nav-links li.activeOption a span {
+  background: #1F1E2C;
+  color: rgb(45 212 191);;
+  /* padding: 0px; */
+  /* background: #C7E1C8; */
+}
+
+.sidebar .nav-links li.activeOption li a:hover {
+  background: #1F1E2C;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+/* ---------------- */
+
+.optionOpen {
+  background: #1F1E2C;
+}
+
+.activeOption {
+  background: #1F1E2C;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.sidebar.close .nav-links li {
+  /* background: red; */
+  margin-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* margin-right: 10px; */
+  border-radius: 10px;
+}
+
+.sidebar.close .nav-links li:hover {
+  /* background: #1d1b31; */
+  background: #1F1E2C;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.sidebar li img {
+  width: 25px;
+  margin-left: 20px;
+}
+
+.sidebar.close li img {
+  width: 30px;
+  margin-left: 20px;
+}
+
+.sidebar.close .nav-links li.activeOption {
+  padding: 10px;
+}
+
+.sidebar.close .nav-links li.activeOption img {
+  margin-left: 10px;
+}
+
+.sidebar.close .nav-links li.activeOption a:hover {
+  margin-left: 0px;
+}
+
+.sidebar .nav-links li .iocn-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .iocn-link {
+  display: block
+}
+
+.sidebar .nav-links li i {
+  height: 50px;
+  min-width: 70px;
+  text-align: center;
+  line-height: 52px;
+  /* color: #fff; */
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.activeOption i {
+  height: 50px;
+  min-width: 70px;
+  text-align: center;
+  line-height: 52px;
+  /* color: #fff; */
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-right: 13px;
+}
+
+.sidebar .nav-links li i:hover {
+  color: rgb(45 212 191);
+}
+
+.sidebar .nav-links li.showMenu i.arrow {
+  transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow {
+  display: none;
+}
+
+.customArrow:hover{
+  color: #1F1E2C !important;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+  margin-left: 20px;
+}
+
+.sidebar.close .nav-links li a .link_name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sub-menu-active {
+  padding: 10px 6px 14px 70px;
+  margin-top: -30px;
+  background: #1F1E2C;
+  display: none;
+  border-radius: 8px;
+}
+
+.sub-menu {
+  padding: 10px 6px 14px 70px;
+  margin-top: -30px;
+  background: #1F1E2C;
+  display: none;
+  /* border-radius: 8px; */
+}
+
+.sidebar .nav-links li.showMenu .sub-menu {
+  display: block;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu-active {
+  display: block;
+}
+
+/* PARA EL DROPDOWN CON ACTIVE = FALSE */
+
+.sidebar .nav-links li .sub-menu a {
+  color: #fff;
+  font-size: 14px;
+  margin-top: -7px;
+  /* padding: 2px 0; */
+  opacity: 0.88;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  color: rgb(45 212 191);
+  opacity: 1;
+  font-weight: bold;
+  /* margin-left: 6px; */
+}
+
+/* PARA EL DROPDOWN CON ACTIVE = TRUE */
+
+.sidebar .nav-links li .sub-menu-active a {
+  color: #fff;
+  font-size: 14px;
+  margin-top: -7px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu-active a:hover {
+  color: rgb(45 212 191);
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* -------------------- */
+/* ESTE DE AQUI ABAJO ES EL QUE TENGO QUE MODIFICAR PARA SACAR LOS MENUS DE HOVER */
+
+.sidebar.close .nav-links li .sub-menu {
+  position: absolute;
+  opacity: 0;
+}
+
+.sidebar.close .nav-links li .sub-menu-active {
+  position: absolute;
+  opacity: 0;
+}
+
+/* PROFILE DETAILS */
+
+.sidebar .profile-details {
+  position: fixed;
+  bottom: 0;
+  /* bottom: 15px; */
+  /* border-radius: 10px; */
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: rgb(31 41 55); */
+  background: #1F1E2C;
+  padding: 12px 0;
+  transition: all 0.15s ease;
+}
+
+.sidebar.close .profile-details {
+  background: none;
+  /* bottom: 16%; */
+}
+
+.sidebar .profile-details img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 -10px 0 10px;
+  background: rgb(31 41 55);
+  transition: all 0.5s ease;
+}
+
+.sidebar.close .profile-details img {
+  margin-left: 18px;
+  height: 60px;
+  width: 60px;
+}
+
+.sidebar .profile-details i {
+  margin-right: 8px;
+}
+
+.sidebar.close .profile-details img {
+  padding: 8px;
+  margin-top: -80px;
+  margin-left: 23px;
+}
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job {
+  /* color: #4E98FF; */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job {
+  display: none;
+}
+
+.sidebar.close .profile-details {
+  cursor: pointer;
+}
+
+.sidebar .profile-details .job {
+  font-size: 14px;
+  margin-top: 4px;
+  /* background-color: #060515; */
+  /* color: #fff; */
+  font-weight: 500;
+  color: #1d1b31;
+  background-color: #C7E1C8;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  /* width: fit-content; */
+}
+
+.sidebar .profile-details i {
+  margin-right: 10px;
+  background-color: #C7E1C8;
+  color: black;
+  /* background-color: #060515; */
+  /* color: #fff; */
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* ---------- HOME SECTION ---------- */
+
+.home-section {
+  position: relative;
+  /* position: absolute; */
+  height: 100%;
+  left: 300px;
+  width: calc(100% - 300px);
+  transition: all 0.3s ease;
+  /* ESTE ES EL EFECTO QUE TENGO QUE SACAR SI QUIERO QUE EL HEADER NO TRANSICIONE LENTO */
+  overflow: auto;
+}
+
+.sidebar.close~.home-section {
+  left: 110px;
+  width: calc(100% - 110px);
+}
+
+.home-section .home-content .bx-menu {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+/* @media screen and (max-width: 1350px) { */
+@media screen and (max-width: 1280px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.close {
+    display: none;
+  }
+
+  .home-section {
+    left: 0px;
+    width: calc(100% - 0px);
+  }
+
+  .sidebar.close~.home-section {
+    left: 0px;
+    width: calc(100% - 0px);
+  }
+
+}

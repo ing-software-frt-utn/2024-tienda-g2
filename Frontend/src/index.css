@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: 'Josefin Sans', 'Roboto Mono', sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  --user-bg-color: 229 231 235;
+  background-color: rgb(var(--user-bg-color)/ 1);
+
+  /* CLARO 229 231 235 */
+  /* OSCURO 31 41 55 */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #060515;
+  border-radius: 20px;
+  border: 1px solid #060515;
+}
+
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+.tox .tox-mbtn {
+  margin: 5px !important;
+  padding: 10px;
+}
+
+.tox:not([dir=rtl]) .tox-statusbar__branding {
+  margin-left: 2ch;
+  display: none !important;
+}
+
+.card {
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #dadada;
+}

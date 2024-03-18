@@ -1,0 +1,66 @@
+/* PAGINATION STYLES */
+
+.rc-pagination-prev button:after {
+    content: '‹‹';
+    display: block;
+    margin-top: 2px;
+    font-size: 22px !important;
+}
+
+.rc-pagination-next button:after {
+    content: '››';
+    display: block;
+    margin-top: 2px;
+    font-size: 22px !important;
+}
+
+.rc-pagination-jump-next button:after {
+    content: '...';
+    display: block;
+    margin-top: 5px;
+}
+
+.rc-pagination-jump-prev button:after {
+    content: '...';
+    display: block;
+    margin-top: 6px;
+}
+
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next {
+    min-width: 40px !important;
+    height: 40px !important;
+    background-color: #132644;
+    text-align: center;
+    margin: 0px 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+li.rc-pagination-prev::hover {
+    cursor: pointer;
+}
+
+.rc-pagination-item {
+    min-width: 40px !important;
+    height: 40px !important;
+    background-color: white;
+    color: black;
+    margin: 0px 7px;
+    border-radius: 10px;
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+    margin-top: 8px !important;
+    display: block;
+    text-align: center;
+}
+
+.rc-pagination-item-active {
+    background: #132644 !important;
+    color: white !important;
+    text-align: center;
+}
